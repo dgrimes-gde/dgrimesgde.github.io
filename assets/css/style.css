@@ -21,68 +21,25 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333; /* Dark background color */
+    background-color: #333;
     color: white;
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    justify-content: center;
 }
 
 .top-nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px; /* Space between navigation items */
+    margin: 0 15px;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .top-nav a:hover {
-    color: #ffde59; /* Hover color for links */
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #0073b1;
-    color: #fff;
-    width: 100%;
-}
-
-.banner h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #fff;
-    font-weight: 700;
-}
-
-.banner p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.cta-button {
-    background-color: #ffde59;
-    color: #333;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #ffc107;
-}
-
-.hero-profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-    border: 5px solid #fff;
+    color: #ffde59;
 }
 
 /* Section Styling */
@@ -103,6 +60,94 @@ h2 {
     font-weight: 700;
 }
 
+/* Experience Content */
+.experience-content {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.company-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
+
+.experience-item {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    text-align: left;
+}
+
+.experience-item[data-aos="fade-up"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bullet Table Layout */
+.bullet-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.bullet-table td {
+    padding: 0.3rem;
+    vertical-align: top;
+}
+
+.bullet-table td:first-child {
+    width: 10px; /* Set width for bullet column */
+    text-align: left;
+    font-weight: bold;
+}
+
+.bullet-table td:last-child {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+/* Achievement Photo */
+.achievement-photo {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
+    transition: opacity 0.4s ease-in;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0073b1;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Other Section Styles (if applicable) */
+
 /* About Me Section */
 .about-me p {
     text-align: left;
@@ -110,20 +155,6 @@ h2 {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 10px;
-}
-
-/* Experience Section */
-.experience ul {
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.8;
-    color: #333;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.experience li {
-    margin-bottom: 8px;
 }
 
 /* Game Gallery */
@@ -225,78 +256,4 @@ form button {
 
 form button:hover {
     background-color: #005b8c;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #0073b1;
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.experience-content {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-}
-
-.company-logo {
-    width: 50px;
-    height: auto;
-    margin-right: 1rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.company-logo:hover {
-    transform: scale(1.1);
-}
-
-.experience-item {
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    text-align: left; /* Ensure text alignment is left */
-}
-
-.experience-item[data-aos="fade-up"] {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.experience-item ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Forces left alignment of bullets */
-    list-style-position: outside;
-    padding-left: 1rem;
-    margin: 0;
-}
-
-.experience-item ul li {
-    text-align: left;
-    width: 100%; /* Ensures each bullet spans the container width */
-}
-
-.achievement-photo {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 1rem;
-    transition: opacity 0.4s ease-in;
 }
