@@ -53,8 +53,7 @@ body {
     position: relative; /* For overlay effect */
 }
 
-/* Darker overlay for readability */
-.experience-content::before {
+/* .experience-content::before {
     content: "";
     position: absolute;
     top: 0;
@@ -64,7 +63,8 @@ body {
     background-color: rgba(0, 0, 0, 0.75); /* Increase opacity for a darker overlay */
     border-radius: 10px;
     z-index: 1;
-}
+} */
+
 
 /* Ensuring the text appears on top of the overlay */
 .experience-content * {
