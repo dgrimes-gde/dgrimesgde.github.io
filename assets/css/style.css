@@ -60,13 +60,37 @@ h2 {
     font-weight: 700;
 }
 
-/* Experience Content */
+/* Experience Content with Background */
 .experience-content {
+    background-image: url('images/logos/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     padding: 2rem;
-    font-family: Arial, sans-serif;
-    text-align: left;
+    border-radius: 10px;
+    color: #f0f2f5; /* Light text color for readability on dark background */
 }
 
+/* Optional: Dark overlay to improve readability over the background image */
+.experience-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with transparency */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Ensuring the text appears on top of the overlay */
+.experience-content * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Company logo styling */
 .company-logo {
     width: 50px;
     height: auto;
@@ -94,7 +118,7 @@ h2 {
     color: #ffde59; /* Optional: light yellow/gold for headers to stand out */
 }
 
-
+/* Fade up animation for each experience item */
 .experience-item[data-aos="fade-up"] {
     opacity: 1;
     transform: translateY(0);
@@ -130,6 +154,13 @@ h2 {
     max-width: 500px;
     margin-top: 1rem;
     transition: opacity 0.4s ease-in;
+}
+
+/* Text shadow for better readability */
+.experience-content h2,
+.experience-content p,
+.experience-content li {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
