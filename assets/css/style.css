@@ -42,33 +42,125 @@ body {
     color: #ffde59;
 }
 
-/* Experience Content */
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0073b1;
+    font-weight: 700;
+}
+
+/* Experience Content with Background */
 .experience-content {
-    background-color: #ffffff; /* Use a solid white background */
+    background-image: url('images/logos/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     padding: 2rem;
     border-radius: 10px;
-    text-align: left;
-    color: #333; /* Set solid color */
+    color: #f0f2f5; /* Light text color for readability on dark background */
 }
 
-/* Experience Item Styling */
-.experience-item {
-    background-color: #f5f5f5; /* Light gray background for contrast */
-    color: #333;
-    padding: 20px;
+/* Optional: Dark overlay to improve readability over the background image */
+.experience-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with transparency */
     border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
-.experience-item h2 {
-    color: #0073b1; /* Primary color for heading */
+/* Ensuring the text appears on top of the overlay */
+.experience-content * {
+    position: relative;
+    z-index: 2;
 }
 
+/* Company logo styling */
 .company-logo {
     width: 50px;
     height: auto;
     margin-right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
+
+.experience-item {
+    background-color: #333; /* Charcoal gray background */
+    color: #f0f2f5; /* Light color for text to contrast with dark background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for depth */
+}
+.experience-item h2 {
+    color: #ffde59; /* Optional: light yellow/gold for headers to stand out */
+}
+
+/* Fade up animation for each experience item */
+.experience-item[data-aos="fade-up"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bullet Table Layout */
+.bullet-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.bullet-table td {
+    padding: 0.3rem;
+    vertical-align: top;
+    color: #f0f2f5; /* Ensures bullet list text matches the light text on charcoal background */
+}
+
+.bullet-table td:first-child {
+    width: 10px; /* Set width for bullet column */
+    text-align: left;
+    font-weight: bold;
+}
+
+.bullet-table td:last-child {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+/* Achievement Photo */
+.achievement-photo {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
+    transition: opacity 0.4s ease-in;
+}
+
+/* Text shadow for better readability */
+.experience-content h2,
+.experience-content p,
+.experience-content li {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
@@ -93,4 +185,116 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Other Section Styles (if applicable) */
+
+/* About Me Section */
+.about-me p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Game Gallery */
+.game-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-item {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills li {
+    background-color: #0073b1;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+    font-size: 1em;
+    font-style: italic;
+    color: #666;
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #0073b1;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea, form button {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #0073b1;
+    outline: none;
+}
+
+form button {
+    background-color: #0073b1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005b8c;
 }
