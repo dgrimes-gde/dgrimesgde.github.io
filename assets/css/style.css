@@ -42,33 +42,15 @@ body {
     color: #ffde59;
 }
 
-/* Section Styling */
-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #0073b1;
-    font-weight: 700;
-}
-
 /* Experience Content with Background */
 .experience-content {
-    background-image: url('images/logos/Background.jpg');
+    background-image: url('../images/logos/Background.jpg'); /* Adjusted path for background image */
     background-size: cover;
     background-position: center;
-    position: relative;
     padding: 2rem;
     border-radius: 10px;
-    color: #f0f2f5; /* Light text color for readability on dark background */
+    color: #f0f2f5; /* Light color for text to contrast with dark background */
+    position: relative; /* For overlay effect */
 }
 
 /* Optional: Dark overlay to improve readability over the background image */
