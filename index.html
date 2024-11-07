@@ -7,8 +7,21 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <!-- Fixed Top Navigation Bar -->
+    <nav class="top-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#live-service">Live Service</a>
+        <a href="#games">Games</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="banner">
             <h1>Ensuring Quality, Enhancing Experiences in Gaming and Tech</h1>
             <p>David Grimes | Sr. Product QA Engineer & Game Design Specialist</p>
@@ -28,7 +41,7 @@
         </p>
     </section>
 
-    <!-- Key Sections -->
+    <!-- Experience Section -->
     <section class="experience" id="experience">
         <h2>Experience</h2>
         <p>Highlights of my career in SWQAE and Game Design Engineering:</p>
@@ -39,6 +52,7 @@
         </ul>
     </section>
 
+    <!-- Live Service Section -->
     <section class="live-service" id="live-service">
         <h2>Live Service</h2>
         <p>
@@ -46,6 +60,75 @@
         </p>
     </section>
 
+    <!-- Games Section -->
     <section class="games" id="games">
         <h2>Games</h2>
-        <p>A showcase of game-relate
+        <p>A showcase of game-related projects I've worked on:</p>
+        <div class="game-gallery">
+            <div class="game-item">
+                <img src="game1.jpg" alt="Game Project 1">
+                <h3>Project Title 1</h3>
+                <p>My role: Ensured performance optimization and seamless user experience.</p>
+            </div>
+            <div class="game-item">
+                <img src="game2.jpg" alt="Game Project 2">
+                <h3>Project Title 2</h3>
+                <p>My role: Led testing for multiplayer functionality, ensuring stability under load.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Automated Testing & Scripting</li>
+            <li>Bug Tracking & Resolution (JIRA, Bugzilla)</li>
+            <li>Game Development Frameworks (Unity, Unreal Engine)</li>
+            <li>Continuous Integration & Delivery (CI/CD)</li>
+            <li>User Experience (UX) Optimization</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            "David’s attention to detail and commitment to quality have consistently ensured smooth game launches. His work ethic and technical skills make him an invaluable team member." - Colleague
+        </blockquote>
+        <blockquote>
+            "A master at bridging technical and non-technical teams, David always brings clarity and high standards to every project." - Manager
+        </blockquote>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://example.com/form-handler" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Or connect with me on <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Twitter</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 David Grimes. All Rights Reserved.</p>
+        <p>
+            <a href="resume.pdf" target="_blank">View Resume</a> | 
+            <a href="#">LinkedIn</a> | 
+            <a href="#">Certifications</a> | 
+            <a href="#">Contact</a>
+        </p>
+    </footer>
+</body>
+</html>
