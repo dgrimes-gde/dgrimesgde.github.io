@@ -253,37 +253,33 @@ footer a:hover {
 
 /* Style for Experience Page */
 .experience-content {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    font-family: Arial, sans-serif;
 }
 
-.experience-content h1 {
-    color: #0073b1;
-    text-align: center;
-    margin-bottom: 20px;
+.company-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
 }
 
 .experience-item {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.experience-item h2 {
-    color: #333;
-    margin-bottom: 10px;
+.experience-item[data-aos="fade-up"] {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.experience-item p {
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.experience-item ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #555;
-}
+.achievement-photo {
+    width: 100%;
 
