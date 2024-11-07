@@ -281,14 +281,17 @@ footer a:hover {
 }
 
 .experience-item ul {
-    list-style-position: outside; /* Ensures the bullets are anchored to the left */
-    padding-left: 1.2rem; /* Adds space between bullets and content */
-    margin-left: 0; /* Aligns list to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Forces left alignment of bullets */
+    list-style-position: outside;
+    padding-left: 1rem;
+    margin: 0;
 }
 
 .experience-item ul li {
-    text-align: left; /* Force text to align left within each bullet */
-    margin-left: 0; /* Ensure no additional indentation */
+    text-align: left;
+    width: 100%; /* Ensures each bullet spans the container width */
 }
 
 .achievement-photo {
