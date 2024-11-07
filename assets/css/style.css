@@ -7,57 +7,96 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0f2f5;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    background: #0073b1;
+    padding: 80px 20px;
+    background-color: #0073b1;
     color: #fff;
+    width: 100%;
 }
 
 .banner h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
 }
 
 .banner p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    font-weight: 300;
 }
 
 .cta-button {
-    background-color: #fff;
-    color: #0073b1;
-    padding: 10px 20px;
+    background-color: #ffde59;
+    color: #333;
+    padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
 }
 
 .hero-profile-pic {
     width: 150px;
     border-radius: 50%;
     margin-top: 20px;
+    border: 5px solid #fff;
 }
 
 /* Section Styling */
 section {
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #0073b1;
+    font-weight: 700;
+}
+
+/* About Me Section */
+.about-me p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Experience Section */
+.experience ul {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.experience li {
+    margin-bottom: 8px;
 }
 
 /* Game Gallery */
@@ -65,44 +104,116 @@ h2 {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .game-item {
     width: 45%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
 }
 
 .game-item img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 5px;
-}
-
-/* Contact Form */
-form label, form input, form textarea, form button {
-    display: block;
-    width: 100%;
     margin-bottom: 10px;
 }
 
+/* Skills Section */
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills li {
+    background-color: #0073b1;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+    font-size: 1em;
+    font-style: italic;
+    color: #666;
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #0073b1;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea, form button {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
 form input, form textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #0073b1;
+    outline: none;
 }
 
 form button {
     background-color: #0073b1;
     color: white;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+form button:hover {
+    background-color: #005b8c;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
     color: #777;
+    margin-top: 20px;
 }
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0073b1;
+    text-decoration: none;
+    margin: 0 5px
