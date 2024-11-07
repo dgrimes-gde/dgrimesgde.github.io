@@ -79,12 +79,21 @@ h2 {
 }
 
 .experience-item {
+    background-color: #333; /* Charcoal gray background */
+    color: #f0f2f5; /* Light color for text to contrast with dark background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
     margin-bottom: 3rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for depth */
 }
+.experience-item h2 {
+    color: #ffde59; /* Optional: light yellow/gold for headers to stand out */
+}
+
 
 .experience-item[data-aos="fade-up"] {
     opacity: 1;
@@ -101,6 +110,7 @@ h2 {
 .bullet-table td {
     padding: 0.3rem;
     vertical-align: top;
+    color: #f0f2f5; /* Ensures bullet list text matches the light text on charcoal background */
 }
 
 .bullet-table td:first-child {
